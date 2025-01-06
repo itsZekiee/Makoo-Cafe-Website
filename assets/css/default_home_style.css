@@ -127,9 +127,9 @@ img{
     background-color: var(--white-color); 
     padding: 20px 0; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    position: sticky; /* Make the header sticky */
-    top: 0; /* Stick to the top */
-    z-index: 100; /* Ensure it stays above other content */
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
 }
 
 .container {
