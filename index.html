@@ -26,8 +26,13 @@
         <div class="container">
             <div class="header__content grid">
                 <a href="#"><h2 class="store__name">Makoo Cafe PH</h2></a>
-
-                <nav class="nav__con">
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav__con" id="nav">
+                    <button class="close-btn" id="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#" class="nav__link active">Home</a>
@@ -42,11 +47,11 @@
                             <a href="#" class="nav__link">Events</a>
                         </li>
                     </ul>
+                    <div class="header__icons">
+                        <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                        <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
                 </nav>
-
-                <div class="header__buttons">
-                    <button class="btn btn-primary">Sign In / Sign Up</button>
-                </div>
             </div>
         </div>    
     </header>
@@ -66,18 +71,89 @@
 
         <!-- =========== INFORMATIVE SECTION =========== -->
         <section class="informative" id="informative">
-            <div class="info__container container grid">
+            <div class="info__container container flex">
                 <div class="info__data">
-                    
+                    <h2 class="info__title">Made with Love,<br>Simply Delicious</h2>
+                    <p class="info__description">
+                        Makoo Cafe offers a delightful array of Japanese-inspired dishes, including the popular taiyaki, 
+                        a fish-shaped cake filled with various sweet fillings. Experience the unique flavors and vibrant 
+                        atmosphere that celebrate the essence of Japanese cuisine, perfect for any occasion! 
+                    </p>
+                    <button class="btn btn-view-more">View More</button>
+                </div>
+                <div class="info__image">
+                    <img src="./assets/media/deliverable_one.jpg" alt="Food Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== SERVICE SECTION =========== -->
+        <section class="service">
+            <div class="service__container container flex">
+                <div class="service__box">
+                    <h2 class="service__title">Our Services</h2>
+                    <p class="service__description">
+                        At Makoo Cafe, we offer a variety of services to enhance your dining experience. 
+                        From takeout to events, we have something for everyone!
+                    </p>
+                    <button class="btn btn-service">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== NEWSLETTER SECTION =========== -->
+        <section class="news">
+            <div class="news__container container flex">
+                <div class="newsletter-box">
+                    <h2 class="newsletter-title">Subscribe to Our Newsletter</h2>
+                    <p class="newsletter-description">Stay updated with our latest news, promotions, and events!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                        <button type="submit" class="btn btn-subscribe">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
+    
+    <!-- ============ FOOTER SECTION ============ -->
+    <footer class="footer">
+        <div class="footer__container container flex">
+            <div class="footer__column">
+                <h3 class="footer__title">Our Address</h3>
+                <p class="footer__text">123 Makoo Street, Cafe City, Country</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Our Contact</h3>
+                <p class="footer__text">makooph@gmail.com<br>0987654321</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Follow Us</h3>
+                <div class="footer__social-icons">
+                    <a href="#" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-x"></i></a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Payment Methods</h3>
+                <div class="footer__payment-methods">
+                    <img src="./assets/media/icons/gcash.png" alt="Gcash" class="footer__payment-img">
+                    <img src="./assets/media/icons/maya.png" alt="Maya" class="footer__payment-img">
+                    <img src="./assets/media/icons/Mastercard.png" alt="Mastercard" class="footer__payment-img">
+                    <img src="./assets/media/icons/Visa.png" alt="Visa" class="footer__payment-img">
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            &copy; 2023 This website is under UNO CUTIEES
+        </div>
+    </footer>
+
+    <!-- ============ MAIN SCRIPT ============ -->
+<script src=".//assets/js/main.js"></script>
 
     <!-- ============ jQuery CDN ============ -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-     
-    <!-- ============ OWL CAROUSEL ============ -->
-    <script src="assets/js/owl.carousel.min.js"></script>
 </body>
 </html>
