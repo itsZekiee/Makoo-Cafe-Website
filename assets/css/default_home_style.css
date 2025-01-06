@@ -7,7 +7,7 @@
     --primary-color: #00A8CC;
     --secondary-color: #b2f2ff;
     --tertiary-color: #d1c7bc;
-    --white-color: #FFFFFF;
+    --white-color: #fdfdfd;
     --dark-blue-color:#072D44;
 
     /* =============== FONTS =============== */
@@ -124,9 +124,12 @@ img{
 
 /* =========  HEADER  ========= */
 .header {
-    background-color: var(--secondary-color); 
+    background-color: var(--white-color); 
     padding: 20px 0; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 100; /* Ensure it stays above other content */
 }
 
 .container {
@@ -193,15 +196,17 @@ img{
     background-color: var(--primary-color); 
     color: var(--white-color);
 }
-
 /* =========  HOME SECTION  ========= */
 .home {
     position: relative;
-    height: 100vh;
-    background-image: url(../media/background_img_one.jpg);
+    height: 88vh;
+    background-image: url(../media/bakcground_img_two.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .home::before {
@@ -211,11 +216,33 @@ img{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(95, 121, 128, 0.604);
     z-index: 1;
 }
 
 .home > * {
     position: relative;
     z-index: 2;
+}
+
+.home__data {
+    text-align: center;
+    z-index: 2;
+}
+/*
+.home__title {
+    font-size: 3rem;
+    color: var(--secondary-color); 
+}
+
+.home__description {
+    font-size: 1.5rem;
+    color: var(--secondary-color); 
+}
+*/
+/* =========  INFORMATIVE SECTION  ========= */
+.informative {
+    background-color: var(--white-color); 
+    height: 88vh;
+    padding: 2rem 0; 
 }
