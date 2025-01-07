@@ -304,7 +304,7 @@ img{
 .home {
     position: relative;
     height: 88vh;
-    background-image: url(../media/background_img_seven.jpg);
+    background-image: url(../media/Events/event_deliverables_one.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -320,7 +320,7 @@ img{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(69, 101, 114, 0.823);
+    background-color: rgba(43, 61, 68, 0.823);
     z-index: 1;
 }
 
@@ -338,9 +338,6 @@ img{
     font-size: 3.5rem;
     color: var(--secondary-color); 
 }
-
-
-
 
 /* =========  FOOTER SECTION  ========= */
 .footer {

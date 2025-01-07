@@ -14,10 +14,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
 
     <!-- =========== StyleeSheet =========== -->
-     <link rel="stylesheet" href="assets/css/default_home_style.css">
+     <link rel="stylesheet" href="assets/css/event_style.css">
 
     <!-- =========== Title =========== -->
-    <title>Makoo Cafe Ph | Events</title>
+    <title>Makoo Cafe Ph | About Us</title>
 </head>
 
 <body>
@@ -26,8 +26,13 @@
         <div class="container">
             <div class="header__content grid">
                 <a href="#"><h2 class="store__name">Makoo Cafe PH</h2></a>
-
-                <nav class="nav__con">
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav__con" id="nav">
+                    <button class="close-btn" id="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="index.html" class="nav__link">Home</a>
@@ -42,11 +47,11 @@
                             <a href="#" class="nav__link active">Events</a>
                         </li>
                     </ul>
+                    <div class="header__icons">
+                        <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                        <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
                 </nav>
-
-                <div class="header__buttons">
-                    <button class="btn btn-primary">Sign In / Sign Up</button>
-                </div>
             </div>
         </div>    
     </header>
@@ -56,15 +61,51 @@
         
         <!-- =========== HOME SECTION =========== -->
         <section class="home" id="home">
-            <h1>Welcome to Makoo Cafe</h1>
-            <p>Your favorite place for coffee and snacks!</p>
+            <div class="home__data">
+                <h1 class="home__title">EVENTS</h1>
+            </div>
         </section>
+
     </main>
+
+    <!-- ============ FOOTER SECTION ============ -->
+    <footer class="footer">
+        <div class="footer__container container flex">
+            <div class="footer__column">
+                <h3 class="footer__title">Our Address</h3>
+                <p class="footer__text">Santa Maria, Central Luzon, Philippines, Santa Maria, Philippines, 3022</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Our Contact</h3>
+                <p class="footer__text">makoocafe@gmail.com<br>0916 706 0380</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Follow Us</h3>
+                <div class="footer__social-icons">
+                    <a href="#" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-x"></i></a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Payment Methods</h3>
+                <div class="footer__payment-methods">
+                    <img src="./assets/media/icons/gcash.png" alt="Gcash" class="footer__payment-img">
+                    <img src="./assets/media/icons/maya.png" alt="Maya" class="footer__payment-img">
+                    <img src="./assets/media/icons/Mastercard.png" alt="Mastercard" class="footer__payment-img">
+                    <img src="./assets/media/icons/Visa.png" alt="Visa" class="footer__payment-img">
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            &copy; 2025 This website is under UNO CUTIEES
+        </div>
+    </footer>
+    
+    <!-- ============ MAIN SCRIPT ============ -->
+    <script src=".//assets/js/main.js"></script>
 
     <!-- ============ jQuery CDN ============ -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-     
-    <!-- ============ OWL CAROUSEL ============ -->
-    <script src="assets/js/owl.carousel.min.js"></script>
 </body>
 </html>

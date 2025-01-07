@@ -203,6 +203,11 @@ img{
     color: var(--dark-blue-color);
     font-size: 1rem; 
     margin: 0 0.5rem; 
+    transition: color 0.3s ease;
+}
+
+.icon:hover{
+    color: var(--primary-color);
 }
 
 .close-btn {
@@ -366,6 +371,7 @@ img{
 }
 
 .info__description {
+    padding-bottom: 1rem;
     color: var(--dark-blue-color);
 }
 
@@ -536,11 +542,6 @@ img{
     color: var(--white-color); 
 }
 
-.footer {
-    background-color: var(--primary-color);
-    padding: 2rem 0;
-    color: var(--white-color);
-}
 
 /* =========  FOOTER SECTION  ========= */
 .footer {

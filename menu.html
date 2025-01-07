@@ -10,11 +10,11 @@
     <!-- ============   FONTAWESOME ============ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- ============ OWL CAROUSEL ============ -->
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
-
+    <!-- ============ BOOTSTRAP ============ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
     <!-- =========== StyleeSheet =========== -->
-     <link rel="stylesheet" href="assets/css/menu_style.css">
+    <link rel="stylesheet" href="assets/css/menu_style.css">
 
     <!-- =========== Title =========== -->
     <title>Makoo Cafe Ph | Home</title>
@@ -44,7 +44,7 @@
                             <a href="#" class="nav__link active">Menu</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Events</a>
+                            <a href="event.html" class="nav__link">Events</a>
                         </li>
                     </ul>
                     <div class="header__icons">
@@ -68,12 +68,574 @@
             </div>
         </section>
 
-        <!-- =========== CATEGORY SECTION =========== -->
-        <section class="category" id="category">
-            <div class="category__container container grid">
+        <!-- =========== CATEGORY AND PRODUCT CARDS SECTION =========== -->
+        <section class="category-product" id="category-product">
+            <div class="container">
+                <div class="category__data">
+                    <h1 class="category__title text-center">Explore Menu</h1>
+                    <h3 class="category__description">
+                        Discover a delightful array of culinary creations at Makoo Cafe Ph, where every 
+                        dish is crafted with passion and fresh ingredients. From savory meals to refreshing 
+                        beverages, our menu offers something for everyone, whether you're in the mood for a 
+                        hearty breakfast, a light lunch, or a sweet treat. Join us and indulge in a unique 
+                        dining experience that celebrates flavor and creativity!
+                    </h3>
+                    <div class="menu-buttons">
+                        <button class="menu-button" onclick="scrollToSection('taiyaki')">Taiyaki</button>
+                        <button class="menu-button" onclick="scrollToSection('rice__meal')">Rice Meals</button>
+                        <button class="menu-button" onclick="scrollToSection('coffee')">Coffee Base</button>
+                        <button class="menu-button" onclick="scrollToSection('frappe')">Frappe</button>
+                        <button class="menu-button" onclick="scrollToSection('milk')">Milk Base</button>
+                        <button class="menu-button" onclick="scrollToSection('yogurt')">Yogurt</button>
+                    </div>
+                </div>
 
+                <!-- ========== TAIYAKI CATEGORY ========== -->
+                <h2 class="section__title-center" id="taiyaki">TAIYAKI</h2>
+                <div id="productCarouselTaiyaki" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Product 1" data-product-price="$10.00" data-product-description="Short description of Product 1" data-product-image="assets/media/Taiyaki Selection/Cheesy Bacon.jpg">
+                                        <img src="assets/media/Taiyaki Selection/Cheesy Bacon.jpg" class="card-img-top" alt="Product 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Product 1</h5>
+                                            <p class="card-text">Short description of Product 1</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$10.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Product 2" data-product-price="$15.00" data-product-description="Short description of Product 2" data-product-image="assets/media/Taiyaki Selection/Chocolate.jpg">
+                                        <img src="assets/media/Taiyaki Selection/Chocolate.jpg" class="card-img-top" alt="Product 2">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Product 2</h5>
+                                            <p class="card-text">Short description of Product 2</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$15.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Product 3" data-product-price="$20.00" data-product-description="Short description of Product 3" data-product-image="assets/media/Taiyaki Selection/Oreo.jpg">
+                                        <img src="assets/media/Taiyaki Selection/Oreo.jpg" class="card-img-top" alt="Product 3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Product 3</h5>
+                                            <p class="card-text">Short description of Product 3</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$20.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Product 4" data-product-price="$25.00" data-product-description="Short description of Product 4" data-product-image="assets/media/Taiyaki Selection/Red Bean.jpg">
+                                        <img src="assets/media/Taiyaki Selection/Red Bean.jpg" class="card-img-top" alt="Product 4">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Product 4</h5>
+                                            <p class="card-text">Short description of Product 4</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$25.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Product 5" data-product-price="$30.00" data-product-description="Short description of Product 5" data-product-image="assets/media/Taiyaki Selection/Ube And Cheese.jpg">
+                                        <img src="assets/media/Taiyaki Selection/Ube And Cheese.jpg" class="card-img-top" alt="Product 5">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Product 5</h5> <p class="card-text">Short description of Product 5</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$30.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ========== CONTROLS FOR TAIYAKI ========== -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselTaiyaki" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarouselTaiyaki" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- ========== RICE MEAL CATEGORY ========== -->
+                <h2 class="section__title-center" id="rice__meal">RICE MEAL</h2>
+                <div id="productCarouselRiceMeal" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Rice Meal 1" data-product-price="$10.00" data-product-description="Short description of Rice Meal 1" data-product-image="assets/media/Rice Meal Selection/Ala King.jpg">
+                                        <img src="assets/media/Rice Meal Selection/Ala King.jpg" class="card-img-top" alt="Rice Meal 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Rice Meal 1</h5>
+                                            <p class="card-text">Short description of Rice Meal 1</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$10.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Rice Meal 2" data-product-price="$15.00" data-product-description="Short description of Rice Meal 2" data-product-image="assets/media/Rice Meal Selection/Chicken Fillet Teriyaki.jpg">
+                                        <img src="assets/media/Rice Meal Selection/Chicken Fillet Teriyaki.jpg" class="card-img-top" alt="Rice Meal 2">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Rice Meal 2</h5>
+                                            <p class="card-text">Short description of Rice Meal 2</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$15.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Rice Meal 3" data-product-price="$20.00" data-product-description="Short description of Rice Meal 3" data-product-image="assets/media/Rice Meal Selection/Okonomeaty.jpg">
+                                        <img src="assets/media/Rice Meal Selection/Okonomeaty.jpg" class="card-img-top" alt="Rice Meal 3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Rice Meal 3</h5>
+                                            <p class="card-text">Short description of Rice Meal 3</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$20.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Rice Meal 4" data-product-price="$25.00" data-product-description="Short description of Rice Meal 4" data-product-image="assets/media/Rice Meal Selection/Pork and Tofu Terimayo.jpg">
+                                        <img src="assets/media/Rice Meal Selection/Pork and Tofu Terimayo.jpg" class="card-img-top" alt="Rice Meal 4">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Rice Meal 4</h5>
+                                            <p class="card-text">Short description of Rice Meal 4</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$25.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Rice Meal 5" data-product-price="$30.00" data-product-description="Short description of Rice Meal 5" data-product-image="assets/media/Rice Meal Selection/Pork Ribs teriyaki.jpg">
+                                        <img src="assets/media/Rice Meal Selection/Pork Ribs teriyaki.jpg" class="card-img-top" alt="Rice Meal 5">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Rice Meal 5</h5>
+                                            <p class="card-text">Short description of Rice Meal 5</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$30.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Rice Meal 6" data-product-price="$35.00" data-product-description="Short description of Rice Meal 6" data-product-image="assets/media/Rice Meal Selection/Tako Sausage.jpg">
+                                        <img src="assets/media/Rice Meal Selection/Tako Sausage.jpg" class="card-img-top" alt="Rice Meal 6">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Rice Meal 6</h5>
+                                            <p class="card-text">Short description of Rice Meal 6</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$35.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== CONTROLS FOR RICE MEAL ========== -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselRiceMeal" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarouselRiceMeal" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- ========== COFFEE BASE CATEGORY ========== -->
+                <h2 class="section__title-center" id="coffee">COFFEE BASE</h2>
+                <div id="productCarouselCoffee" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Cafe Au Lait" data-product-price="$10.00" data-product-description="Short description of Rice Meal 1" data-product-image="assets/media/Coffee Drinks Selection/Cafe Au Lait.jpg">
+                                        <img src="assets/media/Coffee Drinks Selection/Cafe Au Lait.jpg" class="card-img-top" alt="Cafe Au Lait">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cafe Au Lait</h5>
+                                            <p class="card-text"> description of Rice Meal 1</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$10.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Caramel" data-product-price="$15.00" data-product-description="Short description of Rice Meal 2" data-product-image="assets/media/Coffee Drinks Selection/Caramel.jpg">
+                                        <img src="assets/media/Coffee Drinks Selection/Caramel.jpg" class="card-img-top" alt="Caramel">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Caramel</h5>
+                                            <p class="card-text">Short description of Rice Meal 2</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$15.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Classic Cold Brew" data-product-price="$20.00" data-product-description="Short description of Rice Meal 3" data-product-image="assets/media/Coffee Drinks Selection/Classic Cold Brew.jpg">
+                                        <img src="assets/media/Coffee Drinks Selection/Classic Cold Brew.jpg" class="card-img-top" alt="Classic Cold Brew">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Classic Cold Brew</h5>
+                                            <p class="card-text">Short description of Rice Meal 3</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$20.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Mocha" data-product-price="$25.00" data-product-description="Short description of Rice Meal 4" data-product-image="assets/media/Coffee Drinks Selection/Mocha.jpg">
+                                        <img src="assets/media/Coffee Drinks Selection/Mocha.jpg" class="card-img-top" alt="Mocha">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mocha</h5>
+                                            <p class="card-text">Short description of Rice Meal 4</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$25.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== CONTROLS FOR Coffee ========== -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselCoffee" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarouselCoffee" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- ========== COFFEE BASE CATEGORY ========== -->
+                <h2 class="section__title-center" id="frappe">FRAPPE</h2>
+                <div id="productCarouselFrappe" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Oreo Matcha" data-product-price="$10.00" data-product-description="Short description of Rice Meal 1" data-product-image="assets/media/Frappe Selection/Oreo Matcha.jpg">
+                                        <img src="assets/media/Frappe Selection/Oreo Matcha.jpg" class="card-img-top" alt="Oreo Matcha">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Oreo Matcha</h5>
+                                            <p class="card-text"> description of Rice Meal 1</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$10.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Mocha" data-product-price="$15.00" data-product-description="Short description of Rice Meal 2" data-product-image="assets/media/Frappe Selection/Mocha.jpg">
+                                        <img src="assets/media/Frappe Selection/Mocha.jpg" class="card-img-top" alt="Mocha">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mocha</h5>
+                                            <p class="card-text">Short description of Rice Meal 2</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$15.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Coffee Jelly" data-product-price="$20.00" data-product-description="Short description of Rice Meal 3" data-product-image="assets/media/Frappe Selection/Coffee Jelly.jpg">
+                                        <img src="assets/media/Frappe Selection/Coffee Jelly.jpg" class="card-img-top" alt="Coffee Jelly">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Coffee Jelly</h5>
+                                            <p class="card-text">Short description of Rice Meal 3</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$20.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Choco Chip" data-product-price="$25.00" data-product-description="Short description of Rice Meal 4" data-product-image="assets/media/Frappe Selection/Choco Chip.jpg">
+                                        <img src="assets/media/Frappe Selection/Choco Chip.jpg" class="card-img-top" alt="Choco Chip">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Choco Chip</h5>
+                                            <p class="card-text">Short description of Rice Meal 4</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$25.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== CONTROLS FOR Coffee ========== -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselFrappe" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarouselFrappe" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- ========== MILK BASE CATEGORY ========== -->
+                <h2 class="section__title-center" id="milk">MILK BASE</h2>
+                <div id="productCarouselMilk" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Blueberry Milk" data-product-price="$10.00" data-product-description="Short description of Rice Meal 1" data-product-image="assets/media/Milk Base Drink Selection/Blueberry Milk.jpg">
+                                        <img src="assets/media/Milk Base Drink Selection/Blueberry Milk.jpg" class="card-img-top" alt="Blueberry Milk">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blueberry Milk</h5>
+                                            <p class="card-text"> description of Rice Meal 1</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$10.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Choco Milk" data-product-price="$15.00" data-product-description="Short description of Rice Meal 2" data-product-image="assets/media/Milk Base Drink Selection/Choco Milk.jpg">
+                                        <img src="assets/media/Milk Base Drink Selection/Choco Milk.jpg" class="card-img-top" alt="Choco Milk">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Choco Milk</h5>
+                                            <p class="card-text">Short description of Rice Meal 2</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$15.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Matcha Milk" data-product-price="$20.00" data-product-description="Short description of Rice Meal 3" data-product-image="assets/media/Milk Base Drink Selection/Matcha Milk.jpg">
+                                        <img src="assets/media/Milk Base Drink Selection/Matcha Milk.jpg" class="card-img-top" alt="Matcha Milk">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Matcha Milk</h5>
+                                            <p class="card-text">Short description of Rice Meal 3</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$20.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Strawberry Milk" data-product-price="$25.00" data-product-description="Short description of Rice Meal 4" data-product-image="assets/media/Milk Base Drink Selection/Strawberry Milk.jpg">
+                                        <img src="assets/media/Milk Base Drink Selection/Strawberry Milk.jpg" class="card-img-top" alt="Strawberry Milk">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Strawberry Milk</h5>
+                                            <p class="card-text">Short description of Rice Meal 4</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$25.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== CONTROLS FOR Coffee ========== -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselMilk" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarouselMilk" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- ========== YOGURT CATEGORY ========== -->
+                <h2 class="section__title-center" id="yogurt">YOGURT</h2>
+                <div id="productCarouselYogurt" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Blueberry" data-product-price="$10.00" data-product-description="Short description of Rice Meal 1" data-product-image="assets/media/Yogurt Selection/Blueberry.jpg">
+                                        <img src="assets/media/Yogurt Selection/Blueberry.jpg" class="card-img-top" alt="Blueberry">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blueberry</h5>
+                                            <p class="card-text">Short description of Rice Meal 1</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$10.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Kiwi" data-product-price="$15.00" data-product-description="Short description of Rice Meal 2" data-product-image="assets/media/Yogurt Selection/Kiwi.jpg">
+                                        <img src="assets/media/Yogurt Selection/Kiwi.jpg" class="card-img-top" alt="Kiwi">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Kiwi</h5>
+                                            <p class="card-text">Short description of Rice Meal 2</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$15.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Matcha" data-product-price="$20.00" data-product-description="Short description of Rice Meal 3" data-product-image="assets/media/Yogurt Selection/Matcha.jpg">
+                                        <img src="assets/media/Yogurt Selection/Matcha.jpg" class="card-img-top" alt="Matcha">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Matcha</h5>
+                                            <p class="card-text">Short description of Rice Meal 3</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$20.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Muscovado Pearl" data-product-price="$25.00" data-product-description="Short description of Rice Meal 4" data-product-image="assets/media/Yogurt Selection/Muscovado Pearl.jpg">
+                                        <img src="assets/media/Yogurt Selection/Muscovado Pearl.jpg" class="card-img-top" alt="Muscovado Pearl">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Muscovado Pearl</h5>
+                                            <p class="card-text">Short description of Rice Meal 4</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$25.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Oreo" data-product-price="$30.00" data-product-description="Short description of Rice Meal 5" data-product-image="assets/media/Yogurt Selection/Oreo.jpg">
+                                        <img src="assets/media/Yogurt Selection/Oreo.jpg" class="card-img-top" alt="Oreo">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Oreo</h5>
+                                            <p class="card-text">Short description of Rice Meal 5</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$30.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-name="Peach Mango" data-product-price="$35.00" data-product-description="Short description of Rice Meal 6" data-product-image="assets/media/Yogurt Selection/Peach Mango.jpg">
+                                        <img src="assets/media/Yogurt Selection/Peach Mango.jpg" class="card-img-top" alt="Peach Mango">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Peach Mango</h5>
+                                            <p class="card-text">Short description of Rice Meal 6</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-primary">$35.00</span>
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== CONTROLS FOR YOGURT ========== -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarouselYogurt" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarouselYogurt" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </section>
+
+        <!-- =========== PRODUCT MODAL =========== -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Product Name</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" id="modalProductImage" class="img-fluid" alt="Product Image">
+                        <h5 id="modalProductPrice" class="text-primary"></h5>
+                        <p id="modalProductDescription"></p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                        <button class="btn btn-secondary">Check Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     
     <!-- ============ FOOTER SECTION ============ -->
@@ -81,11 +643,11 @@
         <div class="footer__container container flex">
             <div class="footer__column">
                 <h3 class="footer__title">Our Address</h3>
-                <p class="footer__text">123 Makoo Street, Cafe City, Country</p>
+                <p class="footer__text">Santa Maria, Central Luzon, Philippines, Santa Maria, Philippines, 3022</p>
             </div>
             <div class="footer__column">
                 <h3 class="footer__title">Our Contact</h3>
-                <p class="footer__text">makooph@gmail.com<br>0987654321</p>
+                <p class="footer__text">makoocafe@gmail.com<br>0916 706 0380</p>
             </div>
             <div class="footer__column">
                 <h3 class="footer__title">Follow Us</h3>
@@ -111,9 +673,9 @@
     </footer>
 
     <!-- ============ MAIN SCRIPT ============ -->
-<script src=".//assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
-    <!-- ============ jQuery CDN ============ -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- ============ BOOTSTRAP CDN ============ -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     --secondary-color: #b2f2ff;
     --tertiary-color: #d1c7bc;
     --white-color: #ffffff;
-    --dark-blue-color:#072D44;
+    --dark-blue-color: #072D44;
 
     /* =============== FONTS =============== */
     --body-font: 'Poppins', sans-serif;
@@ -16,9 +16,9 @@
     --h1-font-size: 2rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1rem;
-    --normal-font-size:.938rem;
-    --small-font-size:.813rem;
-    --smaller-font-size:.75rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
 
     /* =============== FONTS WEIGHTS =============== */
     --font-thin: 100;
@@ -27,8 +27,8 @@
     --font-semi-bold: 600;
 
     /* =============== MARGIN BOTTOM =============== */
-    --mb-0-5:.5rem;
-    --mb-0-75:.75rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
     --mb-1: 1rem;
     --mb-1-5: 1.5rem;
     --mb-2: 2rem;
@@ -65,60 +65,62 @@ body {
     padding: 0;
     background-color: var(--main-background);
     color: var(--primary-color);
-    transition:.4s;
+    transition: .4s;
 }
 
-button{
+button {
     cursor: pointer;
     border: none;
     outline: none;
 }
 
-h1,h2,h3{
+h1, h2, h3 {
     color: var(--tertiary-color);
     font-weight: var(--font-semi-bold);
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
 /* =========  REUSABLE CODES  ========= */
-.section{
+.section {
     padding: 3.5rem 0 1rem;
 }
 
 .section__title,
-.section__title-center{
+.section__title-center {
+    padding-top: 3rem;
     font-size: var(--h1-font-size);
     margin-bottom: var(--mb-1-5);
     line-height: 140%;
 }
 
-.section__title-center{
+.section__title-center {
+    color: var(--dark-blue-color);
     text-align: center;
 }
 
-.container{
+.container {
     max-width: 980px;
     margin-left: var(--mb-0-75);
     margin-right: var(--mb-0-75);
 }
 
-.grid{
+.grid {
     display: grid;
 }
 
-.main{
+.main {
     overflow: hidden; 
 }
 
@@ -203,6 +205,11 @@ img{
     color: var(--dark-blue-color);
     font-size: 1rem; 
     margin: 0 0.5rem; 
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: var(--primary-color);
 }
 
 .close-btn {
@@ -315,7 +322,7 @@ img{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(95, 121, 128, 0.604);
+    background-color: rgba(43, 61, 68, 0.823);
     z-index: 1;
 }
 
@@ -334,8 +341,76 @@ img{
     color: var(--secondary-color); 
 }
 
+/* =========  CATEGORY SECTION  ========= */
+.category-product {
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
 
+.category__title {
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-1);
+    color: var(--dark-blue-color);
+    text-align: center; /* Centered Title */
+}
 
+.category__description {
+    color: #2a515aaf;
+    font-size: var(--small-font-size);
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.menu-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #008CBA; /* Direct color for hover effect */
+}
+
+/* =========  PRODUCT CARDS  ========= */
+.card {
+    width: 100%; 
+    max-width: 300px; 
+    margin: auto;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+.fa-heart {
+    color: var(--dark-blue-color);
+    transition: color 0.3s ease; 
+}
+
+.fa-heart:hover {
+    color: var(--primary-color);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
 
 /* =========  FOOTER SECTION  ========= */
 .footer {
@@ -397,7 +472,6 @@ img{
 
 .footer__copyright {
     text-align: center;
-    
     font-size: var(--smaller-font-size);
     color: var(--dark-blue-color);
 }
