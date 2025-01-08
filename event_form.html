@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/media/store_logo.png" type="image/x-icon">
+
+    <!-- ============   FONTAWESOME ============ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- ============ OWL CAROUSEL ============ -->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+
+    <!-- =========== StyleeSheet =========== -->
+     <link rel="stylesheet" href="assets/css/event_form_style.css">
+
+    <!-- =========== Title =========== -->
+    <title>Makoo Cafe Ph | About Us</title>
+</head>
+
+<body>
+    <!-- =========== HEADER SECTION =========== -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content grid">
+                <a href="#"><h2 class="store__name">Makoo Cafe PH</h2></a>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav__con" id="nav">
+                    <button class="close-btn" id="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">About Us</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="menu.html" class="nav__link">Menu</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="event.html" class="nav__link active">Events</a>
+                        </li>
+                    </ul>
+                    <div class="header__icons">
+                        <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                        <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>    
+    </header>
+
+    <!-- =========== MAIN SECTION =========== -->
+    <main class="main">
+
+        <!-- =========== FORM SECTION =========== -->
+        <form action="#" class="form">
+            <h1 class="form-title">Customer Information</h1>
+            <div class="form-step form-step-active">
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="text" name="contactNumber" id="contactNumber"/>
+                </div>
+
+                <div class="">
+                    <a href="#" class="btn btn-next width-50 ml-auto" >Next</a>
+                </div>
+            </div>
+            
+            <div class="form-step form-step-active">
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="text" name="contactNumber" id="contactNumber"/>
+                </div>
+
+                <div class="">
+                    <a href="#" class="btn btn-next width-50 ml-auto" >Next</a>
+                </div>
+            </div>
+        </form>
+
+    </main>
+
+    <!-- ============ MAIN SCRIPT ============ -->
+    <script src=".//assets/js/main.js"></script>
+
+    <script>
+        function updateProgress(stepIndex) {
+            const steps = document.querySelectorAll('.step');
+            for (let i = 0; i < steps.length; i++) {
+                if (i < stepIndex) {
+                    steps[i].classList.add('completed');
+                } else {
+                    steps[i].classList.remove('completed');
+                }
+            }
+        }
+        
+        // Example usage: update progress to the second step
+        updateProgress(1);
+    </script>
+
+    <!-- ============ jQuery CDN ============ -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</body>
+</html>
