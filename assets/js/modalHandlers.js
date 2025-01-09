@@ -1,4 +1,4 @@
-// Account Sign In - Up
+// Account Sign In & Up Modal
 document.addEventListener("DOMContentLoaded", function() {
     const userModal = document.getElementById('userModal');
     const userIcon = document.getElementById('fa-user');
@@ -6,25 +6,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeModalFooter = document.getElementById('closeModalFooter');
 
     userIcon.addEventListener('click', function() {
-        userModal.style.display = 'block'; // Show the modal
+        userModal.style.display = 'block'; 
     });
 
     closeModal.addEventListener('click', function() {
-        userModal.style.display = 'none'; // Hide the modal
+        userModal.style.display = 'none'; 
     });
 
     closeModalFooter.addEventListener('click', function() {
-        userModal.style.display = 'none'; // Hide the modal
+        userModal.style.display = 'none'; 
     });
 
     window.addEventListener('click', function(event) {
         if (event.target === userModal) {
-            userModal.style.display = 'none'; // Hide the modal
+            userModal.style.display = 'none'; 
         }
     });
 });
 
-// Product Modal Pop up
+// Pop Up - Product Modal
 const productModal = document.getElementById('productModal');
 if (productModal) {
     productModal.addEventListener('show.bs.modal', event => {
@@ -46,3 +46,32 @@ if (productModal) {
         modalImage.src = productImage;
     });
 }
+
+// Pop Up - Warning Modal
+document.addEventListener("DOMContentLoaded", function() {
+    const shoppingCart = document.querySelectorAll('.fa-shopping-cart')
+    const heartIcons = document.querySelectorAll('.fa-heart');
+    const primaryButtons = document.querySelectorAll('.btn-primary');
+    const secondaryButtons = document.querySelectorAll('.btn-secondary');
+
+    function showWarningModal() {
+        const warningModal = new bootstrap.Modal(document.getElementById('warningModal'));
+        warningModal.show();
+    }
+
+    shoppingCart.forEach(icon => {
+        icon.addEventListener('click', showWarningModal);
+    });
+
+    heartIcons.forEach(icon => {
+        icon.addEventListener('click', showWarningModal);
+    });
+
+    primaryButtons.forEach(button => {
+        button.addEventListener('click', showWarningModal);
+    });
+
+    secondaryButtons.forEach(button => {
+        button.addEventListener('click', closeModal);
+    });
+});
