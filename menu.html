@@ -48,7 +48,7 @@
                         </li>
                     </ul>
                     <div class="header__icons">
-                        <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                        <a href="#" class="icon"><i class="fas fa-user" id="fa-user"></i></a>
                         <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </nav>
@@ -618,38 +618,94 @@
             </div>
         </section>
 
-        <!-- =========== PRODUCT MODAL =========== -->
-        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+        <!-- ============ User Modal Handler ============ -->
+        <div class="modal" id="userModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="productModalLabel">Product Name</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
                     <div class="modal-body">
-                        <img src="" id="modalProductImage" class="img-fluid" alt="Product Image">
-                        <h5 id="modalProductPrice" class="text-primary"></h5>
-                        <p id="modalProductDescription"></p>
-                        <button class="btn btn-primary">Add to Cart</button>
-                        <button class="btn btn-secondary">Check Out</button>
+                        <div class="account__container" id="account__container">
+                            <div class="form__container sign-in"> <!-- Moved sign-in to the top -->
+                                <form>
+                                    <h1 class="form__title">Sign In</h1>
+                                    <div class="social-icons">
+                                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                                    </div>
+                                    <span>or use your email password</span>
+                                    <input type="email" placeholder="Email" required>
+                                    <input type="password" placeholder="Password" required>
+                                    <a href="#">Forget Your Password?</a>
+                                    <button type="submit" class="btn">Sign In</button>
+                                </form>
+                            </div>
+                            <div class="form__container sign-up"> <!-- Moved sign-up to the bottom -->
+                                <form>
+                                    <h1 class="form__title">Create Account</h1>
+                                    <div class="social-icons">
+                                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                                    </div>
+                                    <span>or use your email for registration</span>
+                                    <input type="text" placeholder="Name" required>
+                                    <input type="email" placeholder="Email" required>
+                                    <input type="password" placeholder="Password" required>
+                                    <button type="submit" class="btn">Sign Up</button>
+                                </form>
+                            </div>
+                            <div class="toggle-container">
+                                <div class="toggle">
+                                    <div class="toggle-panel toggle-left">
+                                        <h1>Hello, Friend!</h1>
+                                        <p>Register with your personal details to use all of site features  </p>
+                                        <button class="hidden" id="login">Sign In</button>
+                                    </div>
+                                    <div class="toggle-panel toggle-right">
+                                        <h1>Welcome Back!</h1>
+                                        <p>Enter your personal details to use all of site features</p>
+                                        <button class="hidden" id="register">Sign Up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- =========== WARNING MODAL =========== -->
-        <div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true">
+        <!-- ============ Warning Modal Handler ============ -->
+        <div class="modal fade" id="warning__customModal" tabindex="-1" aria-labelledby="warning__customModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="warningModalLabel">Account Required</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="custom-modal-content">
+                    <div class="custom-modal-header">
+                        <h5 class="custom-modal-title" id="warning__customModalLabel">Account Required</h5>
                     </div>
-                    <div class="modal-body">
+                    <div class="custom-modal-body">
                         You need to create an account to perform this action.
                     </div>
-                    <div class="modal-footer">
+                    <div class="custom-modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========== PRODUCT MODAL =========== -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-product-content">
+                    <div class="modal-product-body">
+                        <img src="" id="modalProductImage" class="img-fluid" alt="Product Image">
+                        <div class="product-details">
+                            <h5 id="modalProductName" class="modal-product-title">Product Name</h5>
+                            <h5 id="modalProductPrice" class="text-primary"></h5>
+                            <p id="modalProductDescription"></p>
+                            <div class="button-group">
+                                <button class="btn btn-primary">Add to Cart</button>
+                                <button class="btn btn-secondary">Check Out</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

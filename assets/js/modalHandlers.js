@@ -24,38 +24,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Pop Up - Product Modal
-const productModal = document.getElementById('productModal');
-if (productModal) {
-    productModal.addEventListener('show.bs.modal', event => {
-        const button = event.relatedTarget; 
-        const productName = button.getAttribute('data-product-name');
-        const productPrice = button.getAttribute('data-product-price');
-        const productDescription = button.getAttribute('data-product-description');
-        const productImage = button.getAttribute('data-product-image');
 
-        // Update the modal's content
-        const modalTitle = productModal.querySelector('.modal-title');
-        const modalPrice = productModal.querySelector('#modalProductPrice');
-        const modalDescription = productModal.querySelector('#modalProductDescription');
-        const modalImage = productModal.querySelector('#modalProductImage');
-
-        modalTitle.textContent = productName;
-        modalPrice.textContent = productPrice;
-        modalDescription.textContent = productDescription;
-        modalImage.src = productImage;
-    });
-}
-
-// Pop Up - Warning Modal
+// Warning Modal
 document.addEventListener("DOMContentLoaded", function() {
-    const shoppingCart = document.querySelectorAll('.fa-shopping-cart')
+    const shoppingCart = document.querySelectorAll('.fa-shopping-cart');
     const heartIcons = document.querySelectorAll('.fa-heart');
     const primaryButtons = document.querySelectorAll('.btn-primary');
     const secondaryButtons = document.querySelectorAll('.btn-secondary');
 
     function showWarningModal() {
-        const warningModal = new bootstrap.Modal(document.getElementById('warningModal'));
+        const warningModal = new bootstrap.Modal(document.getElementById('warning__customModal'));
         warningModal.show();
     }
 
@@ -75,3 +53,26 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener('click', closeModal);
     });
 });
+
+// Product Modal
+const productModal = document.getElementById('productModal');
+if (productModal) {
+    productModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget; 
+        const productName = button.getAttribute('data-product-name');
+        const productPrice = button.getAttribute('data-product-price');
+        const productDescription = button.getAttribute('data-product-description');
+        const productImage = button.getAttribute('data-product-image');
+
+        // Update the modal's content
+        const modalTitle = productModal.querySelector('#modalProductName'); // Change to ID
+        const modalPrice = productModal.querySelector('#modalProductPrice');
+        const modalDescription = productModal.querySelector('#modalProductDescription');
+        const modalImage = productModal.querySelector('#modalProductImage');
+
+        modalTitle.textContent = productName;
+        modalPrice.textContent = productPrice;
+        modalDescription.textContent = productDescription;
+        modalImage.src = productImage;
+    });
+}
