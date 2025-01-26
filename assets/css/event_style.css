@@ -464,3 +464,109 @@ img{
     font-size: var(--smaller-font-size);
     color: var(--dark-blue-color);
 }
+
+/* =========  MEDIA QUERY  ========= */
+/* Devices between 375px and 414px */
+@media (min-width: 375px) and (max-width: 414px) {
+    .home__title {
+        font-size: 2.5rem; 
+    }
+
+    .info__data {
+        margin-right: 2rem; 
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 575px) {
+    .home__title {
+        font-size: 2rem; 
+    }
+
+    .info__container {
+        flex-direction: column; 
+    }
+
+    .info__data {
+        margin-right: 0; 
+        text-align: center;
+    }
+
+    .info__image {
+        margin-top: 1rem; 
+    }
+}
+
+/* Small Devices (Tablets) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .home__title {
+        font-size: 2.5rem; 
+    }
+
+    .info__container {
+        flex-direction: row; 
+    }
+
+    .info__data {
+        margin-right: 3rem; 
+    }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .home__title {
+        font-size: 3rem;
+    }
+
+    .info__data {
+        padding: 3rem; 
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .home__title {
+        font-size: 3.5rem;
+    }
+
+    .info__container {
+        justify-content: space-between; 
+    }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 1200px) {
+    .home__title {
+        font-size: 4rem; 
+    }
+
+    .info__container {
+        padding: 4rem; 
+    }
+}
+
+/* Portrait Mode for Tablets */
+@media (max-width: 768px) and (orientation: portrait) {
+    .header {
+        padding: 10px 0; 
+    }
+
+    .nav__con {
+        padding: 1rem; 
+    }
+}
+
+/* Landscape Mode for Tablets */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .info__container {
+        flex-direction: row; 
+    }
+
+    .info__data {
+        margin-right: 4rem; 
+    }
+}

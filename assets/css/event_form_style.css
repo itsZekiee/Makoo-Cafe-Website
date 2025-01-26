@@ -458,3 +458,97 @@ img{
     font-size: var(--smaller-font-size);
     color: var(--dark-blue-color);
 }
+
+/* =========  MEDIA QUERY  ========= */
+/* Devices between 375px and 414px */
+@media (min-width: 375px) and (max-width: 414px) {
+    .form-container {
+        max-width: 90%; 
+        padding: 1.5rem; 
+    }
+
+    .header__content {
+        flex-direction: column; 
+    }
+
+    .nav__list {
+        flex-direction: column; 
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 575px) {
+    .form-container {
+        max-width: 95%; 
+    }
+
+    .header {
+        padding: 10px 0; 
+    }
+
+    .store__name {
+        font-size: 1.2rem; 
+    }
+}
+
+/* Small Devices (Tablets) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .form-container {
+        max-width: 80%; 
+    }
+
+    .header__content {
+        flex-direction: row; 
+    }
+
+    .nav__list {
+        flex-direction: row; 
+    }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .form-container {
+        max-width: 70%; 
+    }
+
+    .header__content {
+        justify-content: space-between; 
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .form-container {
+        max-width: 60%; 
+    }
+
+    .header__content {
+        padding: 20px; 
+    }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 1200px) {
+    .form-container {
+        max-width: 30%; 
+    }
+
+    .header__content {
+        padding: 10px; 
+    }
+}
+
+/* Portrait Mode for Tablets */
+@media (max-width: 768px) and (orientation: portrait) {
+    .form-container {
+        padding: 1rem; 
+    }
+}
+
+/* Landscape Mode for Tablets */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .form-container {
+        padding: 2rem; 
+    }
+}
