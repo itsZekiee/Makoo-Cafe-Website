@@ -3,17 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const userModal = document.getElementById('userModal');
     const userIcon = document.getElementById('fa-user');
     const closeModal = document.getElementById('closeModal');
-    const closeModalFooter = document.getElementById('closeModalFooter');
 
     userIcon.addEventListener('click', function() {
         userModal.style.display = 'block'; 
     });
 
     closeModal.addEventListener('click', function() {
-        userModal.style.display = 'none'; 
-    });
-
-    closeModalFooter.addEventListener('click', function() {
         userModal.style.display = 'none'; 
     });
 
@@ -24,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 // Warning Modal
 document.addEventListener("DOMContentLoaded", function() {
     const shoppingCart = document.querySelectorAll('.fa-shopping-cart');
@@ -32,9 +26,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const primaryButtons = document.querySelectorAll('.btn-primary');
     const secondaryButtons = document.querySelectorAll('.btn-secondary');
 
+    let isWarningModalVisible = false; // Track the visibility of the warning modal
+
     function showWarningModal() {
         const warningModal = new bootstrap.Modal(document.getElementById('warning__customModal'));
         warningModal.show();
+        isWarningModalVisible = true; // Set the flag to true when the warning modal is shown
+
+        // Add an event listener to reset the flag when the modal is hidden
+        warningModal._element.addEventListener('hidden.bs.modal', function () {
+            isWarningModalVisible = false; // Reset the flag when the modal is closed
+        });
     }
 
     shoppingCart.forEach(icon => {
@@ -50,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     secondaryButtons.forEach(button => {
-        button.addEventListener('click', closeModal);
+        button.addEventListener('click', showWarningModal);
     });
 });
 
@@ -58,6 +60,12 @@ document.addEventListener("DOMContentLoaded", function() {
 const productModal = document.getElementById('productModal');
 if (productModal) {
     productModal.addEventListener('show.bs.modal', event => {
+        // Check if the warning modal is visible
+        if (isWarningModalVisible) {
+            event.preventDefault(); // Prevent the product modal from showing
+            return; // Exit the function
+        }
+
         const button = event.relatedTarget; 
         const productName = button.getAttribute('data-product-name');
         const productPrice = button.getAttribute('data-product-price');

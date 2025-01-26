@@ -62,8 +62,8 @@
         <section class="home" id="home">
             <div class="home__container container grid">
                 <div class="home__data">
-                    <!--<h1 class="home__title">Makoo Cafe Ph</h1>
-                    <h3 class="home__description">Life's too short. Taiyaki't Easy</h3>-->
+                    <h1 class="home__title">Makoo Cafe Ph</h1>
+                    <h3 class="home__description">Life's too short. Taiyaki't Easy</h3>
                 </div>
             </div>
         </section>
@@ -171,7 +171,7 @@
                             </form>
                         </div>
                         <div class="form__container sign-up"> <!-- Moved sign-up to the bottom -->
-                            <form>
+                            <form onsubmit="sendEmail(); reset(); return false;">
                                 <h1 class="form__title">Create Account</h1>
                                 <div class="social-icons">
                                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -180,7 +180,7 @@
                                 </div>
                                 <span>or use your email for registration</span>
                                 <input type="text" placeholder="Name" required>
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" id="emailInput" placeholder="Email" required>
                                 <input type="password" placeholder="Password" required>
                                 <button type="submit" class="btn">Sign Up</button>
                             </form>
@@ -201,6 +201,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="closeModal"></div>
             </div>
         </div>
     </div>
@@ -228,10 +229,29 @@
     <!-- ============ Bootstrap JS ============ -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <!-- ============ SMTP Server Script ============ -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <!-- ============ Main Script ============ -->
      <script src="assets/js/main.js"></script>
 
     <!-- ============ modalHandler Script ============ -->
     <script src="assets/js/modalHandlers.js"></script>
+
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host : "smtp25.elasticemail.com",
+                Username : "arvindeveraaa@gmail.com",
+                Password : "55BFC7B2FCF0EA08C9284EE8F49D41365935",
+                To : 'arvindeveraaa@gmail.com',
+                From : "arvindeveraaa@gmail.com",
+                Subject : "Makoo Cafe PH - Account Creation",
+                Body : "Welcome to Makoo Cafe PH! Enjoy navigating to the website. Have fun!"
+                }).then(
+                    message => alert("Account created successfully!")
+            );
+        }
+    </script>
 </body>
 </html>
