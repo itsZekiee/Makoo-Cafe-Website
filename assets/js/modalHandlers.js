@@ -1,3 +1,5 @@
+let isWarningModalVisible = false; // Track the visibility of the warning modal
+
 // Account Sign In & Up Modal
 document.addEventListener("DOMContentLoaded", function() {
     const userModal = document.getElementById('userModal');
@@ -26,10 +28,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const primaryButtons = document.querySelectorAll('.btn-primary');
     const secondaryButtons = document.querySelectorAll('.btn-secondary');
 
-    let isWarningModalVisible = false; // Track the visibility of the warning modal
-
     function showWarningModal() {
         const warningModal = new bootstrap.Modal(document.getElementById('warning__customModal'));
+
+        // Check if the product modal is currently visible
+        const productModal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+        if (productModal) {
+            productModal.hide(); // Hide the product modal if it's open
+        }
+
         warningModal.show();
         isWarningModalVisible = true; // Set the flag to true when the warning modal is shown
 

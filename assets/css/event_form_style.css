@@ -64,6 +64,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--main-background);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../media/bakcground_img_two.jpg);
+    background-size: auto;
+    background-position: center;
     color: var(--primary-color);
     transition:.4s;
 }
