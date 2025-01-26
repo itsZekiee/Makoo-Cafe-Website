@@ -340,61 +340,55 @@ img{
 }
 
 /* =========  FORM SECTION  ========= */
-.width-50 {
-    width: 50%;
+.form-container {
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    color: var(--dark-blue-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.ml-auto {
-    margin-left: auto;
+.form-container h2, 
+.form-container h3, 
+.form-container label {
+    color: var(--dark-blue-color);
 }
 
-.form-title {
-    text-align: center;
-    color: var(--primary-color);
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-input {
-    display: block;
+.form-container input, 
+.form-container select, 
+.form-container textarea {
+    background-color: var(--white-color);
+    color: var(--dark-blue-color);
+    border: none;
+    padding: 0.5rem;
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-}
-.form {
-    min-height: 75vh;
-    place-items: center;
-    display: grid;
-    box-sizing: border-box;
-    width: clamp(320px, 30%, 430px);
-    margin: 0 auto;
-    border: 1px solid #000000;
-    border-radius: 0.35rem;
-    padding: 1.5rem;
+    border-radius: 4px;
 }
 
-.input-group {
-    margin: 2rem 0;
+.form-container input::placeholder, 
+.form-container select::placeholder, 
+.form-container textarea::placeholder {
+    color: var(--dark-blue-color);
+    border-radius: 10px;
 }
 
-.btn {
-    padding: 0.75rem;
-    display: block;
-    text-decoration: none;
+.form-container button {
     background-color: var(--primary-color);
     color: var(--white-color);
-    text-align: center;
-    border-radius: 0.25rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn:hover {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+.form-container button:hover {
+    background-color: var(--dark-blue-color);
+    color: var(--secondary-color);
 }
 
 /* =========  FOOTER SECTION  ========= */

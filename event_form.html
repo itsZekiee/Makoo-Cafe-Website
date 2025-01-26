@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/media/store_logo.png" type="image/x-icon">
-
+    
     <!-- ============   FONTAWESOME ============ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <!-- ============ OWL CAROUSEL ============ -->
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
-
+    
+    <!-- ============   BOOTSTRAP CDN ============ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
     <!-- =========== StyleeSheet =========== -->
-     <link rel="stylesheet" href="assets/css/event_form_style.css">
+    <link rel="stylesheet" href="assets/css/event_form_style.css">
 
-    <!-- =========== Title =========== -->
-    <title>Makoo Cafe Ph | About Us</title>
+    <title>Multi-Step Form</title>
 </head>
-
 <body>
     <!-- =========== HEADER SECTION =========== -->
     <header class="header">
@@ -38,13 +33,13 @@
                             <a href="index.html" class="nav__link">Home</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">About Us</a>
+                            <a href="about.html" class="nav__link">About Us</a>
                         </li>
                         <li class="nav__item">
                             <a href="menu.html" class="nav__link">Menu</a>
                         </li>
                         <li class="nav__item">
-                            <a href="event.html" class="nav__link active">Events</a>
+                            <a href="#" class="nav__link active">Events</a>
                         </li>
                     </ul>
                     <div class="header__icons">
@@ -56,87 +51,99 @@
         </div>    
     </header>
 
-    <!-- =========== MAIN SECTION =========== -->
-    <main class="main">
-
-        <!-- =========== FORM SECTION =========== -->
-        <form action="#" class="form">
-            <h1 class="form-title">Customer Information</h1>
-            <div class="form-step form-step-active">
-                <div class="input-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" name="firstName" id="firstName"/>
-                </div>
-
-                <div class="input-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" name="lastName" id="lastName"/>
-                </div>
-
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email"/>
-                </div>
-
-                <div class="input-group">
-                    <label for="contactNumber">Contact Number</label>
-                    <input type="text" name="contactNumber" id="contactNumber"/>
-                </div>
-
-                <div class="">
-                    <a href="#" class="btn btn-next width-50 ml-auto" >Next</a>
-                </div>
-            </div>
-            
-            <div class="form-step form-step-active">
-                <div class="input-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" name="firstName" id="firstName"/>
-                </div>
-
-                <div class="input-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" name="lastName" id="lastName"/>
-                </div>
-
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email"/>
-                </div>
-
-                <div class="input-group">
-                    <label for="contactNumber">Contact Number</label>
-                    <input type="text" name="contactNumber" id="contactNumber"/>
-                </div>
-
-                <div class="">
-                    <a href="#" class="btn btn-next width-50 ml-auto" >Next</a>
-                </div>
-            </div>
-        </form>
-
-    </main>
-
-    <!-- ============ MAIN SCRIPT ============ -->
-    <script src=".//assets/js/main.js"></script>
-
-    <script>
-        function updateProgress(stepIndex) {
-            const steps = document.querySelectorAll('.step');
-            for (let i = 0; i < steps.length; i++) {
-                if (i < stepIndex) {
-                    steps[i].classList.add('completed');
-                } else {
-                    steps[i].classList.remove('completed');
-                }
-            }
-        }
+    <!-- Form Container -->
+    <div class="form-container mt-5">
+        <h2 class="text-center">Event Registration</h2>
         
-        // Example usage: update progress to the second step
-        updateProgress(1);
-    </script>
+        <!-- Personal Information Form -->
+        <div id="personal-info" class="form-step">
+            <h3>Personal Information</h3>
+            <form id="personalInfoForm">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="eventType" class="form-label">Type of Event</label>
+                    <select class="form-select" id="eventType" required>
+                        <option value="">Select an event</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="corporate">Corporate Event</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="eventDate" class="form-label">Pick A Date</label>
+                    <input type="datetime-local" class="form-control" id="eventDate" required>
+                </div>
+                <button type="button" class="btn btn-primary" id="nextToPayment">Next</button>
+            </form>
+        </div>
 
-    <!-- ============ jQuery CDN ============ -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- Payment Form -->
+        <div id="payment-info" class="form-step" style="display: none;">
+            <h3>Payment Information</h3>
+            <form id="paymentForm">
+                <div class="mb-3">
+                    <label for="paymentMethod" class="form-label">Select Payment Method</label>
+                    <select class="form-select" id="paymentMethod" required>
+                        <option value="card" selected>Card Payment</option>
+                        <option value="gcash">Gcash</option>
+                        <option value="maya">Maya</option>
+                    </select>
+                </div>
+
+                <div id="cardPaymentFields">
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Card Number</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required maxlength="19">
+                            <span class="input-group-text" id="cardTypeIcon"><i class="fas fa-credit-card"></i></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="expirationDate" class="form-label">Valid Thru (MM/YY)</label>
+                            <input type="text" class="form-control" id="expirationDate" placeholder="12/36" required maxlength="5">
+                        </div>
+                        <div class="col">
+                            <label for="securityCode" class="form-label">Security Code</label>
+                            <input type="text" class="form-control" id="securityCode" placeholder="123" required maxlength="3">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gcashMayaFields" style="display: none;">
+                    <p>Please follow the instructions for Gcash or Maya payment.</p>
+                </div>
+
+                <button type="button" class="btn btn-secondary" id="backToPersonal">Back</button>
+                <button type="button" class="btn btn-primary" id="nextToConfirmation">Next</button>
+            </form>
+        </div>
+
+        <!-- Confirmation Form -->
+        <div id="confirmation" class="form-step" style="display: none;">
+            <h3>Confirmation</h3>
+            <div id="summary"></div>
+            <button type="button" class="btn btn-secondary" id="backToPayment">Back</button>
+            <button type="submit" class="btn btn-success" id="submitForm">Submit</button>
+        </div>
+    </div>
+
+    <script src="assets/js/eventForms.js"></script>
 </body>
 </html>

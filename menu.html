@@ -266,7 +266,6 @@
                                                 <i class="fas fa-heart"></i>
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -696,16 +695,20 @@
         <!-- =========== PRODUCT MODAL =========== -->
         <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-product-content">
-                    <div class="modal-product-body">
+                <div class="product-modal-content modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                    </div>
+                    <div class="modal-body">
                         <img src="" id="modalProductImage" class="img-fluid" alt="Product Image">
                         <div class="product-details">
                             <h5 id="modalProductName" class="modal-product-title">Product Name</h5>
                             <h5 id="modalProductPrice" class="text-primary"></h5>
                             <p id="modalProductDescription"></p>
                             <div class="button-group">
-                                <button id="addToCart" class="btn btn-primary">Add to Cart</button>
-                                <button id="checkOut" class="btn btn-secondary">Check Out</button>
+                                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                <button class="btn btn-secondary check-out">Check Out</button>
                             </div>
                         </div>
                     </div>

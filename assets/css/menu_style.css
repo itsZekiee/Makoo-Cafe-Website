@@ -382,7 +382,7 @@ img {
 }
 
 .menu-button:hover {
-    background-color: #008CBA; /* Direct color for hover effect */
+    background-color: #008CBA; 
 }
 
 /* =========  PRODUCT CARDS  ========= */
@@ -508,26 +508,34 @@ img {
 
 /* =========  PRODUCT MODAL STYLES  ========= */
 .modal-dialog {
-    max-width: 600px;
+    max-width: 40%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: transparent; 
 }
 
 .modal-content {
+    border: none;
+    background-color: transparent; 
+}
+
+.product-modal-content {
     border-radius: 10px;
+    background-color: white;
+
 }
 
 .modal-header {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); 
     border-bottom: none;
 }
 
 .modal-body {
     display: flex;
-    background-color: var(--white-color);
+    background-color: transparent !important; 
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -802,6 +810,28 @@ img {
     transform: translateX(200%);
 }
 
+.sign-in .btn{
+    color: var(--dark-blue-color);
+    background-color: var(--secondary-color);
+    transition: all 0.3 s ease-in-out;
+}
+
+.sign-in .btn:hover{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.sign-up .btn{
+    color: var(--dark-blue-color);
+    background-color: var(--secondary-color);
+    transition: all 0.3 s ease-in-out;
+}
+
+.sign-up .btn:hover{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
 /* ========= Warning Modal Handler ========= */
 .modal.fade {
     transition: opacity 0.15s linear;
@@ -1027,11 +1057,11 @@ img {
     }
 
     .category-product {
-        padding: 2rem 0; /* Adjust padding for tablets */
+        padding: 2rem 0; 
     }
 
     .card {
-        max-width: 100%; /* Ensure cards take full width */
+        max-width: 100%; 
     }
 }
 
@@ -1046,11 +1076,11 @@ img {
     }
 
     .category-product {
-        padding: 3rem 0; /* Adjust padding for medium devices */
+        padding: 3rem 0; 
     }
 
     .card {
-        max-width: 300px; /* Set a max width for cards */
+        max-width: 300px;
     }
 }
 
@@ -1061,11 +1091,11 @@ img {
     }
 
     .category-product {
-        padding: 4rem 0; /* Adjust padding for large devices */
+        padding: 4rem 0; 
     }
 
     .card {
-        max-width: 300px; /* Set a max width for cards */
+        max-width: 300px; 
     }
 }
 
@@ -1084,11 +1114,11 @@ img {
     }
 
     .category-product {
-        padding: 5rem 0; /* Adjust padding for extra large devices */
+        padding: 5rem 0; 
     }
 
     .card {
-        max-width: 300px; /* Set a max width for cards */
+        max-width: 300px; 
     }
 }
 
@@ -1104,7 +1134,7 @@ img {
     }
 
     .category-product {
-        padding: 1rem 0; /* Reduce padding for portrait mode */
+        padding: 1rem 0; 
     }
 }
 
@@ -1120,10 +1150,10 @@ img {
     }
 
     .category-product {
-        padding: 3rem 0; /* Adjust padding for landscape mode */
+        padding: 3rem 0;
     }
 
     .card {
-        max-width: 300px; /* Set a max width for cards */
+        max-width: 300px;
     }
 }
