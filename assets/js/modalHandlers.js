@@ -65,7 +65,7 @@ if (productModal) {
         const productImage = button.getAttribute('data-product-image');
 
         // Update the modal's content
-        const modalTitle = productModal.querySelector('#modalProductName'); // Change to ID
+        const modalTitle = productModal.querySelector('#modalProductName');
         const modalPrice = productModal.querySelector('#modalProductPrice');
         const modalDescription = productModal.querySelector('#modalProductDescription');
         const modalImage = productModal.querySelector('#modalProductImage');
