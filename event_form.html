@@ -103,9 +103,9 @@
                 <div class="mb-3">
                     <label for="paymentMethod" class="form-label">Select Payment Method</label>
                     <select class="form-select" id="paymentMethod" required>
-                        <option value="card" selected>Card Payment</option>
-                        <option value="gcash">Gcash</option>
-                        <option value="maya">Maya</option>
+                        <option value="Card" selected>Card Payment</option>
+                        <option value="Gcash">Gcash</option>
+                        <option value="Maya">Maya</option>
                     </select>
                 </div>
 
@@ -147,6 +147,112 @@
         </div>
     </div>
 
+    <!-- ============ User Modal Handler ============ -->
+    <div class="modal" id="userModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="account__container" id="account__container">
+                        <div class="form__container sign-in"> <!-- Moved sign-in to the top -->
+                            <form>
+                                <h1 class="form__title">Sign In</h1>
+                                <div class="social-icons">
+                                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                                </div>
+                                <span>or use your email password</span>
+                                <input type="email" placeholder="Email" required>
+                                <input type="password" placeholder="Password" required>
+                                <a href="#">Forget Your Password?</a>
+                                <button type="submit" class="btn">Sign In</button>
+                            </form>
+                        </div>
+                        <div class="form__container sign-up"> <!-- Moved sign-up to the bottom -->
+                            <form onsubmit="sendEmail(); reset(); return false;">
+                                <h1 class="form__title">Create Account</h1>
+                                <div class="social-icons">
+                                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                                </div>
+                                <span>or use your email for registration</span>
+                                <input type="text" placeholder="Name" required>
+                                <input type="email" id="emailInput" placeholder="Email" required>
+                                <input type="password" placeholder="Password" required>
+                                <button type="submit" class="btn">Sign Up</button>
+                            </form>
+                        </div>
+                        <div class="toggle-container">
+                            <div class="toggle">
+                                <div class="toggle-panel toggle-left">
+                                    <h1>Hello, Friend!</h1>
+                                    <p>Register with your personal details to use all of site features  </p>
+                                    <button class="hidden" id="login">Sign In</button>
+                                </div>
+                                <div class="toggle-panel toggle-right">
+                                    <h1>Welcome Back!</h1>
+                                    <p>Enter your personal details to use all of site features</p>
+                                    <button class="hidden" id="register">Sign Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="closeModal"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ Warning Modal Handler ============ -->
+    <div class="modal fade" id="warning__customModal" tabindex="-1" aria-labelledby="warning__customModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="custom-modal-content">
+                <div class="custom-modal-header">
+                    <h5 class="custom-modal-title" id="warning__customModalLabel">Account Required</h5>
+                </div>
+                <div class="custom-modal-body">
+                    You need to create an account to perform this action.
+                </div>
+                <div class="custom-modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MAIN SCRIPT ============ -->
+    <script src=".//assets/js/main.js"></script>
+
+    <!-- ============ Event Form SCRIPT ============ -->
     <script src="assets/js/eventForms.js"></script>
+
+    <!-- ============ jQuery CDN ============ -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- ============ Bootstrap JS ============ -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- ============ SMTP Server Script ============ -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- ============ modalHandler Script ============ -->
+    <script src="assets/js/modalHandlers.js"></script>
+    
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host : "smtp25.elasticemail.com",
+                Username : "arvindeveraaa@gmail.com",
+                Password : "55BFC7B2FCF0EA08C9284EE8F49D41365935",
+                To : 'arvindeveraaa@gmail.com',
+                From : "arvindeveraaa@gmail.com",
+                Subject : "Makoo Cafe PH - Account Creation",
+                Body : "Welcome to Makoo Cafe PH! Enjoy navigating to the website. Have fun!"
+                }).then(
+                    message => alert("Account created successfully!")
+            );
+        }
+    </script>
 </body>
 </html>

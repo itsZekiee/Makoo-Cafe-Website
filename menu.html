@@ -780,6 +780,20 @@
                     message => alert("Account created successfully!")
             );
         }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = sectionPosition - headerHeight;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
     </script>
 </body>
 </html> 

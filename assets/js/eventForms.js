@@ -54,7 +54,6 @@ document.getElementById('backToPayment').addEventListener('click', function() {
 // Handle form submission
 document.getElementById('submitForm').addEventListener('click', function() {
     alert('Form submitted successfully!');
-    // Here you can add your form submission logic
 });
 
 // Show/hide card payment fields based on selected payment method
